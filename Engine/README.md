@@ -366,20 +366,20 @@ performance before choosing one.
 
 ### Milestone 1 --- Verify local services
 
--   [ ] Confirm Ollama responds at `localhost:11434`.
--   [ ] Confirm the selected model generates a useful tutorial plan.
+-   [X] Confirm Ollama responds at `localhost:11434`.
+-   [X] Confirm the selected model generates a useful tutorial plan.
 -   [X] Start Excalimate MCP with `npx @excalimate/mcp-server`.
--   [ ] Connect Excalimate's live preview.
--   [ ] Confirm the MCP endpoint is reachable.
+-   [X] Connect Excalimate's live preview.
+-   [X] Confirm the MCP endpoint is reachable.
 
 ### Milestone 2 --- Discover and test MCP tools
 
--   [ ] Connect from a small Python MCP client.
+-   [X] Connect from a small Python MCP client.
 -   [X] List all available tools.
--   [ ] Inspect tool descriptions and input schemas.
+-   [x] Inspect tool descriptions and input schemas.
 -   [X] Call one simple creation tool.
--   [ ] Confirm the result appears in Excalimate.
--   [ ] Test an animation operation.
+-   [X] Confirm the result appears in Excalimate.
+-   [X] Test an animation operation.
 
 ### Milestone 3 --- Generate a complete scene
 
