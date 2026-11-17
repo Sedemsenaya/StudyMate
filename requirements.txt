@@ -1,2 +1,5 @@
 docling
-0llama
+playwright
+uvicorn
+fastapi
+mcp

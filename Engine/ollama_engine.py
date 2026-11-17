@@ -1,5 +1,4 @@
 from docling_engine import DoclingEngine
-from add_icons import available_icons
 
 from ollama import chat
 

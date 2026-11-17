@@ -5,7 +5,8 @@ class DoclingEngine:
 
     def open_file(self):
         # file_path =  r"C:\Users\Colli\PycharmProjects\StudyMate\uploads\transport_layer_test.pdf"
-        file_path =  r"C:\Users\Colli\PycharmProjects\StudyMate\uploads\biology_photosynthesis.pdf"
+        # file_path =  r"C:\Users\Colli\PycharmProjects\StudyMate\uploads\biology_photosynthesis.pdf"
+        file_path =  r"C:\Users\Colli\PycharmProjects\StudyMate\uploads\networking_transport_layer.pdf"
         converter = DocumentConverter()
         result = converter.convert(file_path)
         markdown = result.document.export_to_markdown()
