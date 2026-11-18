@@ -8,8 +8,11 @@ from mcp.client.streamable_http import streamable_http_client
 
 MCP_URL = "http://127.0.0.1:4000/mcp"
 
+# EXCALIDRAW_FILE = Path(
+#     r"C:\Users\Colli\PycharmProjects\StudyMate\Engine\Output\diagram.excalidraw"
+# )
 EXCALIDRAW_FILE = Path(
-    r"C:\Users\Colli\PycharmProjects\StudyMate\Engine\Output\diagram.excalidraw"
+    r"C:\Users\Colli\PycharmProjects\StudyMate\Engine\visualization\scenes\scene_01.excalidraw"
 )
 
 

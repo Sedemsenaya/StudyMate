@@ -433,3 +433,9 @@ Markdown document, then:
 
 The initial goal is one reliable end-to-end tutorial---not a fully
 autonomous production system.
+
+| File | Responsibility |
+|---|---|
+| scene_parser.py | Read and validate Ollama JSON |
+| layout_engine.py | Calculate positions of shapes |
+| excalidraw_exporter.py | Generate Excalidraw JSON |

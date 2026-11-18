@@ -3,3 +3,7 @@ playwright
 uvicorn
 fastapi
 mcp
+cairosvg
+pydantic
+matplotlib
+sympy

@@ -21,8 +21,14 @@ from playwright.async_api import async_playwright
 
 APP_URL = "https://app.excalimate.com"
 
+# DEFAULT_FILE = Path(
+#     r"C:\Users\Colli\PycharmProjects\StudyMate\Engine\Output\diagram.excalidraw"
+# )
+# DEFAULT_FILE = Path(
+#     r"C:\Users\Colli\PycharmProjects\StudyMate\Engine\Output\scene_01.excalidraw"
+# )
 DEFAULT_FILE = Path(
-    r"C:\Users\Colli\PycharmProjects\StudyMate\Engine\Output\diagram.excalidraw"
+    r"C:\Users\Colli\PycharmProjects\StudyMate\Engine\visualization\scenes\scene_03.excalidraw"
 )
 
 HEADLESS = False   # watch the first run; set True once it works

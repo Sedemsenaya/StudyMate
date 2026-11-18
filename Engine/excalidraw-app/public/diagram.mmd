@@ -1,59 +1,106 @@
 graph TD
     %% scene: 1
-    %% title: Layer Positioning
-    %% explain: The transport layer's role in the protocol stack
-    %% voice: The transport layer sits between application processes and the network layer. It ensures data reaches the correct process on each host.
-    subgraph Scene1["Layer Positioning"]
-        A[Application Layer] --> B[Transport Layer]
-        B --> C[Network Layer]
-        style A fill:#87CEEB
-        style B fill:#98FB98
-        style C fill:#FFB6C1
+    %% title: Cells - The Basic Units of Life
+    %% voice: Every living thing is made of cells. Prokaryotic cells have no nucleus, while eukaryotic cells keep their DNA in a nucleus and divide their work among organelles.
+    subgraph S1["1. Cells"]
+        C1["🦠 Cell Theory"] --> C2["Prokaryotic Cell"]
+        C1 --> C3["Eukaryotic Cell"]
+        C3 --> C4["🎯 Nucleus (stores DNA)"]
+        C3 --> C5["🔋 Mitochondria (makes ATP)"]
+        C3 --> C6["📦 Golgi (packages proteins)"]
+        C3 --> C7["🧱 Plasma Membrane"]
     end
 
     %% scene: 2
-    %% title: Ports and Sockets
-    %% explain: How processes are identified through ports and sockets
-    %% voice: A port number identifies a process. A socket combines an IP address and port number for data routing. Multiplexing directs data to the right process.
-    subgraph Scene2["Ports and Sockets"]
-        D[Process] --> E[Port Number]
-        F[IP Address] --> G[Socket]
-        H[Data] --> I[Multiplexing]
-        style D fill:#ADD8E6
-        style E fill:#DDA0DD
-        style F fill:#98FB98
-        style G fill:#FFB6C1
-        style H fill:#9370DB
+    %% title: Membranes and Transport
+    %% voice: The plasma membrane is a phospholipid bilayer that lets some things through and keeps others out. Passive transport needs no energy, while active transport spends ATP to move things against their gradient.
+    subgraph S2["2. Membranes and Transport"]
+        M1["🧱 Phospholipid Bilayer"] --> M2["Selectively Permeable"]
+        M2 --> M3["Passive Transport (no energy)"]
+        M2 --> M4["⚡ Active Transport (uses ATP)"]
+        M3 --> M5["💧 Osmosis"]
+        M3 --> M6["Facilitated Diffusion"]
+        M4 --> M7["Na⁺/K⁺ Pump"]
     end
 
     %% scene: 3
-    %% title: TCP vs UDP
-    %% explain: Key differences between the two protocols
-    %% voice: TCP is connection-oriented with reliability guarantees. UDP is connectionless with lower overhead. Choose TCP for web pages and email, UDP for video calls and games.
-    subgraph Scene3["TCP vs UDP"]
-        J[TCP] --> K["Reliable\nOrdered\nFlow Control"]
-        L[UDP] --> M["Unreliable\nNo Order\nLow Overhead"]
-        N[Web Pages] --> O[TCP]
-        P[Video Calls] --> Q[UDP]
-        style J fill:#7FFF00
-        style K fill:#FFA07A
-        style L fill:#ADD8E6
-        style M fill:#DDA0DD
-        style N fill:#FFB6C1
-        style O fill:#98FB98
-        style P fill:#87CEEB
-        style Q fill:#FFD700
+    %% title: DNA and Replication
+    %% voice: DNA is a double helix of two antiparallel strands. A pairs with T and G pairs with C, so each strand can serve as a template when the cell copies its DNA.
+    subgraph S3["3. DNA"]
+        D1["🧬 Double Helix"] --> D2["Base Pairs: A-T, G-C"]
+        D1 --> D3["Sugar-Phosphate Backbone"]
+        D2 --> D4["Semiconservative Replication"]
+        D4 --> D5["Helicase unzips"]
+        D4 --> D6["DNA Polymerase copies"]
     end
 
     %% scene: 4
-    %% title: Protocol Stack
-    %% explain: Data flow through the protocol stack
-    %% voice: Data travels from application to network layer through the transport layer. Each layer adds headers for routing and delivery.
-    subgraph Scene4["Protocol Stack"]
-        R[Application] --> S[Transport]
-        T[Network] --> U[Physical]
-        style R fill:#87CEEB
-        style S fill:#98FB98
-        style T fill:#FFB6C1
-        style U fill:#DDA0DD
+    %% title: From Gene to Protein
+    %% voice: The central dogma says DNA is transcribed into messenger RNA in the nucleus, and the mRNA is translated into protein at the ribosome, three bases at a time.
+    subgraph S4["4. Gene to Protein"]
+        G1["🧬 DNA"] -->|"Transcription"| G2["📜 mRNA"]
+        G2 -->|"Translation"| G3["🧱 Protein"]
+        G2 --> G4["Codons (3 bases)"]
+        G4 --> G5["tRNA brings amino acids"]
+        G5 --> G3
     end
+
+    %% scene: 5
+    %% title: Cell Division
+    %% voice: Mitosis makes two identical cells for growth and repair. Meiosis makes four unique sex cells with half the chromosomes, thanks to crossing over and independent assortment.
+    subgraph S5["5. Cell Division"]
+        V1["🔄 Cell Cycle"] --> V2["Mitosis"]
+        V1 --> V3["Meiosis"]
+        V2 --> V4["Prophase → Metaphase → Anaphase → Telophase"]
+        V4 --> V5["2 Identical Diploid Cells"]
+        V3 --> V6["Crossing Over"]
+        V6 --> V7["4 Unique Haploid Gametes"]
+    end
+
+    %% scene: 6
+    %% title: Energy and Metabolism
+    %% voice: Enzymes speed up reactions by lowering activation energy. Photosynthesis stores light energy in glucose, and cellular respiration releases it again as ATP.
+    subgraph S6["6. Energy"]
+        E1["✂️ Enzymes"] --> E2["Lower Activation Energy"]
+        E3["☀️ Light"] --> E4["🌿 Photosynthesis (chloroplast)"]
+        E4 --> E5["🍬 Glucose + O₂"]
+        E5 --> E6["🔋 Cellular Respiration (mitochondria)"]
+        E6 --> E7["⚡ ATP"]
+        E6 --> E8["CO₂ + H₂O"]
+        E8 --> E4
+    end
+
+    %% scene: 7
+    %% title: Genetics
+    %% voice: Mendel showed that traits are passed on by genes that come in different versions called alleles. A Punnett square predicts a three-to-one ratio when two carriers are crossed.
+    subgraph S7["7. Genetics"]
+        H1["🌱 Mendel's Peas"] --> H2["Law of Segregation"]
+        H1 --> H3["Law of Independent Assortment"]
+        H2 --> H4["Punnett Square"]
+        H4 --> H5["3 Dominant : 1 Recessive"]
+    end
+
+    %% scene: 8
+    %% title: Evolution
+    %% voice: Natural selection favors individuals whose inherited traits suit their environment. Over many generations this changes populations and creates new species.
+    subgraph S8["8. Evolution"]
+        X1["🐒 Natural Selection"] --> X2["Variation + Inheritance"]
+        X2 --> X3["Survival of the Fittest"]
+        X3 --> X4["New Species"]
+        X5["🦴 Fossils & DNA Evidence"] --> X1
+    end
+
+    %% scene: 9
+    %% title: Ecology
+    %% voice: Energy flows from the sun to producers, then to consumers, with only about ten percent passed on at each level. Carbon, unlike energy, is recycled through the ecosystem.
+    subgraph S9["9. Ecology"]
+        L1["☀️ Sun"] --> L2["🌱 Producers"]
+        L2 --> L3["🐇 Primary Consumers"]
+        L3 --> L4["🦅 Top Predators"]
+        L5["🌫️ Atmosphere CO₂"] -->|"Photosynthesis"| L2
+        L3 -->|"Respiration"| L5
+    end
+
+    S6 -.-> S9
+    S3 -.-> S4
+    S5 -.-> S7

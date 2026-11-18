@@ -1,92 +1,137 @@
-from docling.document_converter import DocumentConverter
+import json
+import time
+from pathlib import Path
+
+from docling.datamodel.base_models import InputFormat
+from docling.datamodel.pipeline_options import PdfPipelineOptions
+from docling.document_converter import DocumentConverter, PdfFormatOption
 from ollama import chat
 
+from typing import Literal, Optional
+from pydantic import BaseModel, Field
+
+ENGINE = Path(r"C:\Users\Colli\PycharmProjects\StudyMate\Engine")
+PROMPT_FILE = ENGINE / "scene_prompt.txt"
+OUT_FILE = ENGINE / "visualization" / "diagram.json"
+
+
+# ---------- the JSON shape Ollama must return (enforced, so it always parses) ----------
+
+Layout = Literal["flowchart", "sequence", "cycle", "concept_map", "hierarchy", "anatomy",
+                 "comparison", "table", "timeline", "network", "architecture", "equation",
+                 "graph", "circuit", "geography"]
+ElementType = Literal["rectangle", "rounded_rectangle", "circle", "ellipse", "diamond",
+                      "text", "equation", "icon_placeholder"]
+Relationship = Literal["causes", "produces", "uses", "contains", "part_of", "leads_to",
+                       "converts_to", "transports", "compares_with", "depends_on"]
+
+
+class Element(BaseModel):
+    id: str
+    type: ElementType
+    text: str
+    icon: Optional[str]
+    color: str
+    description: str
+    expression: Optional[str] = None
+
+
+class Connection(BaseModel):
+    model_config = {"populate_by_name": True}
+    from_: str = Field(alias="from")
+    to: str
+    label: str
+    relationship: Relationship
+
+
+class Scene(BaseModel):
+    scene: int
+    title: str
+    learning_objective: str
+    narration: str
+    key_fact: str
+    layout: Layout
+    elements: list[Element]
+    connections: list[Connection]
+    x_range: Optional[list[float]] = None
+    y_range: Optional[list[float]] = None
+
+
+class SectionLesson(BaseModel):
+    section_title: str
+    subject: str
+    scenes: list[Scene] = Field(min_length=1, max_length=3)
+
+
+# ---------- engines ----------
 
 class DoclingEngine:
+    def __init__(self):
+        # FIX 1: build the converter ONCE (it loads the AI models), and skip OCR /
+        # table detection - your PDFs already contain real text.
+        opts = PdfPipelineOptions()
+        opts.do_ocr = False
+        opts.do_table_structure = False
+        self.converter = DocumentConverter(
+            format_options={InputFormat.PDF: PdfFormatOption(pipeline_options=opts)}
+        )
 
-    def open_file(self):
-        # file_path =  r"C:\Users\Colli\PycharmProjects\StudyMate\uploads\transport_layer_test.pdf"
-        # file_path =  r"C:\Users\Colli\PycharmProjects\StudyMate\uploads\biology_photosynthesis.pdf"
-        file_path =  r"C:\Users\Colli\PycharmProjects\StudyMate\uploads\networking_transport_layer.pdf"
-        converter = DocumentConverter()
-        result = converter.convert(file_path)
-        markdown = result.document.export_to_markdown()
-        return markdown
-
+    def open_file(self, file_path):
+        result = self.converter.convert(file_path)
+        return result.document.export_to_markdown()
 
 
 class OllamaEngine:
-    def generateLesson(self):
+    def __init__(self, model="qwen3:8b"):
+        self.model = model
+
+    # FIX 2: take the messages as an argument instead of reading a global
+    def generateLesson(self, messages):
         stream = chat(
-            model='qwen3:8b',
-            messages=message,
-            options={'temperature': 0.2},
+            model=self.model,
+            messages=messages,
+            format=SectionLesson.model_json_schema(by_alias=True),  # FIX 3: valid JSON every time
+            options={
+                "temperature": 0.2,
+                "num_ctx": 8192,        # FIX 4: room for the prompt + document
+            },
+            think=False,                # FIX 5: no hidden "thinking" before the answer
+            keep_alive="10m",           # FIX 6: keep the model loaded between runs
             stream=True,
         )
-
-        out = ""  # FIX: collect the text as it streams
+        out = ""
         for chunk in stream:
-            piece = chunk['message']['content']
-            print(piece, end='', flush=True)
+            piece = chunk["message"]["content"]
+            print(piece, end="", flush=True)
             out += piece
+        print()
         return out
 
+
 if __name__ == "__main__":
+    # file_path = r"C:\Users\Colli\PycharmProjects\StudyMate\uploads\Biology_Foundations.pdf"
+    file_path = r"C:\Users\Colli\PycharmProjects\StudyMate\uploads\cs_B_algorithms_data_structures.pdf"
+    # file_path = r"C:\Users\Colli\PycharmProjects\StudyMate\uploads\networking_transport_layer.pdf"
+
+    SYSTEM_PROMPT = PROMPT_FILE.read_text(encoding="utf-8")   # FIX 7: prompt lives in one file
+
+    t = time.time()
     docling_engine = DoclingEngine()
-    markdown_file = docling_engine.open_file()
-    ollama_engine = OllamaEngine()
+    print(f"[time] Docling models loaded: {time.time() - t:.1f}s")
 
-    SYSTEM_PROMPT = """
-    You are an expert educational content generator.
+    t = time.time()
+    markdown_file = docling_engine.open_file(file_path)
+    print(f"[time] PDF converted: {time.time() - t:.1f}s  ({len(markdown_file):,} characters)")
 
-    Your task is to transform documents into structured visual lessons using Mermaid.js flowchart syntax.
-
-    STRICT OUTPUT RULES:
-    1. Output ONLY valid Mermaid syntax.
-    2. Do NOT include Markdown code fences.
-    3. Do NOT include introductory text, explanations, summaries, or conclusions outside Mermaid syntax.
-    4. Do NOT output Python, HTML, JSON, XML, or any other programming language.
-    5. Do NOT include unsupported Mermaid syntax.
-    6. All narration, explanations, scene titles, and teaching notes MUST be written inside Mermaid comments using %%.
-    7. Use graph TD as the diagram declaration.
-    8. Use Mermaid nodes and connections to represent educational concepts and relationships.
-    9. Organize complex lessons into clearly labeled subgraphs.
-    10. Ensure all node IDs are unique.
-    11. Keep node labels concise and readable.
-    12. Preserve the important educational information from the source document.
-    13. Organize the lesson into sequential scenes.
-
-    SCENE STRUCTURE:
-    For every scene, include:
-    %% scene: [scene number]
-    %% title: [scene title]
-    %% explain: [educational explanation]
-    %% voice: [natural narration for the scene]
-
-    DIAGRAM STRUCTURE:
-    - Use subgraph to organize each scene.
-    - Use nodes to represent concepts, processes, and examples.
-    - Use arrows to demonstrate relationships, dependencies, and sequences.
-    - Use appropriate Mermaid flowchart syntax.
-    - Ensure connections are logically correct.
-    - Make the diagram educational and easy to follow.
-
-    FINAL VALIDATION:
-    Before responding, verify that:
-    - The entire output is valid Mermaid syntax.
-    - Every narration and explanation is inside %% comments.
-    - No content exists outside the Mermaid diagram.
-    - No Markdown fences are present.
-    - The output can be passed directly to a Mermaid renderer.
-
-    Return ONLY the Mermaid source.
-    """
-
-
-    message = [
-        {'role': 'system', 'content': SYSTEM_PROMPT},
-        {'role': 'user', 'content': f':\n\n{markdown_file}'},
+    messages = [
+        {"role": "system", "content": SYSTEM_PROMPT},
+        {"role": "user", "content": f"Create visual scenes from this section:\n\n{markdown_file}"},
     ]
-    ollama_lesson = ollama_engine.generateLesson()
-    with open("Engine/excalidraw-app/public/diagram.mmd", "w", encoding="utf-8") as file:
-        file.write(ollama_lesson)
+
+    t = time.time()
+    ollama_lesson = OllamaEngine().generateLesson(messages)
+    print(f"[time] Ollama: {time.time() - t:.1f}s")
+
+    lesson = SectionLesson.model_validate_json(ollama_lesson)      # fails loudly if broken
+    OUT_FILE.write_text(json.dumps(lesson.model_dump(by_alias=True), indent=2), encoding="utf-8")
+    print(f"Saved {len(lesson.scenes)} scene(s) to {OUT_FILE}")

@@ -1,0 +1,9 @@
+.venv/
+node_modules/
+Engine/node_modules/
+Engine/bioicons/
+Engine/excalidraw-libraries/
+Engine/Output/
+.icon_cache/
+__pycache__/
+*.mp4
