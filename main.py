@@ -82,7 +82,7 @@ class DoclingEngine:
 
 
 class OllamaEngine:
-    def __init__(self, model="qwen3:8b"):
+    def __init__(self, model="qwen3:14b"):
         self.model = model
 
     # FIX 2: take the messages as an argument instead of reading a global
@@ -110,8 +110,8 @@ class OllamaEngine:
 
 if __name__ == "__main__":
     # file_path = r"C:\Users\Colli\PycharmProjects\StudyMate\uploads\Biology_Foundations.pdf"
-    file_path = r"C:\Users\Colli\PycharmProjects\StudyMate\uploads\cs_B_algorithms_data_structures.pdf"
-    # file_path = r"C:\Users\Colli\PycharmProjects\StudyMate\uploads\networking_transport_layer.pdf"
+    # file_path = r"C:\Users\Colli\PycharmProjects\StudyMate\uploads\cs_B_algorithms_data_structures.pdf"
+    file_path = r"C:\Users\Colli\PycharmProjects\StudyMate\uploads\other_05_supply_and_demand.pdf"
 
     SYSTEM_PROMPT = PROMPT_FILE.read_text(encoding="utf-8")   # FIX 7: prompt lives in one file
 

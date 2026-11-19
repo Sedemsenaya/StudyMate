@@ -1,61 +1,55 @@
 {
-  "section_title": "Algorithms and Data Structures",
-  "subject": "Computer Science",
+  "section_title": "Demand, Supply, and Equilibrium",
+  "subject": "Economics",
   "scenes": [
     {
       "scene": 1,
-      "title": "What is an Algorithm?",
-      "learning_objective": "Understand what an algorithm is and how data structures help programs run faster.",
-      "narration": "An algorithm is like a recipe that tells a computer exactly what steps to follow to solve a problem. A data structure is like a special way to organize data so that the algorithm can use it efficiently. Choosing the right algorithm and data structure can make a program run thousands of times faster.",
-      "key_fact": "Algorithms are step-by-step recipes; data structures organize data for efficient use.",
-      "layout": "concept_map",
+      "title": "Demand",
+      "learning_objective": "Reproduce the definition of demand and the law of demand.",
+      "narration": "Demand is how much of a product buyers want at each price. The law of demand says that when the price rises, the quantity demanded falls. On a graph the demand curve slopes downward.",
+      "key_fact": "The law of demand says that when the price rises, the quantity demanded falls.",
+      "layout": "sequence",
       "elements": [
         {
           "id": "A",
           "type": "rectangle",
-          "text": "Algorithm",
-          "icon": "recipe",
+          "text": "Demand",
+          "icon": null,
           "color": "#FFD700",
-          "description": "A step-by-step recipe for solving a problem.",
+          "description": "Demand is how much of a product buyers want at each price.",
           "expression": null
         },
         {
           "id": "B",
-          "type": "rectangle",
-          "text": "Data Structure",
-          "icon": "folder",
-          "color": "#87CEEB",
-          "description": "A way to organize data so it can be used efficiently.",
+          "type": "rounded_rectangle",
+          "text": "Law of demand",
+          "icon": null,
+          "color": "#FFA500",
+          "description": "The law of demand says that when the price rises, the quantity demanded falls.",
           "expression": null
         },
         {
           "id": "C",
-          "type": "ellipse",
-          "text": "Program Speed",
-          "icon": "speedometer",
-          "color": "#FFA500",
-          "description": "How fast a program runs depends on the algorithm and data structure used.",
+          "type": "rectangle",
+          "text": "Demand curve",
+          "icon": null,
+          "color": "#FFD700",
+          "description": "On a graph the demand curve slopes downward.",
           "expression": null
         }
       ],
       "connections": [
         {
           "from": "A",
-          "to": "C",
-          "label": "affects",
-          "relationship": "causes"
+          "to": "B",
+          "label": "described by",
+          "relationship": "part_of"
         },
         {
           "from": "B",
           "to": "C",
-          "label": "affects",
-          "relationship": "causes"
-        },
-        {
-          "from": "A",
-          "to": "B",
-          "label": "uses",
-          "relationship": "depends_on"
+          "label": "represented by",
+          "relationship": "part_of"
         }
       ],
       "x_range": null,
@@ -63,67 +57,52 @@
     },
     {
       "scene": 2,
-      "title": "Searching: Linear vs Binary Search",
-      "learning_objective": "Understand how linear and binary search work and why binary search is faster.",
-      "narration": "Linear search checks each item one by one, like looking through a book from the first page. Binary search is much faster, but it only works on a sorted list. It checks the middle item, and if it's not the target, it throws away half the list and repeats. This makes binary search much more efficient.",
-      "key_fact": "Binary search is faster because it halves the list each time.",
-      "layout": "comparison",
+      "title": "Supply",
+      "learning_objective": "Reproduce the definition of supply and the law of supply.",
+      "narration": "Supply is how much sellers are willing to offer at each price. The law of supply says that when the price rises, sellers offer more. The supply curve slopes upward.",
+      "key_fact": "The law of supply says that when the price rises, sellers offer more.",
+      "layout": "sequence",
       "elements": [
         {
           "id": "A",
           "type": "rectangle",
-          "text": "Linear Search",
-          "icon": "book",
-          "color": "#FFB6C1",
-          "description": "Checks each item one by one from the start.",
+          "text": "Supply",
+          "icon": null,
+          "color": "#00BFFF",
+          "description": "Supply is how much sellers are willing to offer at each price.",
           "expression": null
         },
         {
           "id": "B",
-          "type": "rectangle",
-          "text": "Binary Search",
-          "icon": "search",
-          "color": "#ADD8E6",
-          "description": "Works on sorted lists and halves the list each time.",
+          "type": "rounded_rectangle",
+          "text": "Law of supply",
+          "icon": null,
+          "color": "#1E90FF",
+          "description": "The law of supply says that when the price rises, sellers offer more.",
           "expression": null
         },
         {
           "id": "C",
-          "type": "ellipse",
-          "text": "Sorted List",
-          "icon": "list",
-          "color": "#98FB98",
-          "description": "A list that is arranged in order for binary search to work.",
-          "expression": null
-        },
-        {
-          "id": "D",
-          "type": "ellipse",
-          "text": "Unsorted List",
-          "icon": "list",
-          "color": "#FFD700",
-          "description": "A list that is not in order, which only works for linear search.",
+          "type": "rectangle",
+          "text": "Supply curve",
+          "icon": null,
+          "color": "#00BFFF",
+          "description": "The supply curve slopes upward.",
           "expression": null
         }
       ],
       "connections": [
         {
           "from": "A",
-          "to": "D",
-          "label": "requires",
-          "relationship": "depends_on"
+          "to": "B",
+          "label": "described by",
+          "relationship": "part_of"
         },
         {
           "from": "B",
           "to": "C",
-          "label": "requires",
-          "relationship": "depends_on"
-        },
-        {
-          "from": "B",
-          "to": "A",
-          "label": "faster",
-          "relationship": "compares_with"
+          "label": "represented by",
+          "relationship": "part_of"
         }
       ],
       "x_range": null,
@@ -131,67 +110,52 @@
     },
     {
       "scene": 3,
-      "title": "Stacks and Queues",
-      "learning_objective": "Understand how stacks and queues work and their common uses.",
-      "narration": "A stack is like a pile of plates: you push a plate on top and pop it from the top, so the last plate in is the first one out. Stacks are used for undo buttons and function calls. A queue is like a line at a shop: you add items to the back and remove them from the front, so the first item in is the first out. Queues are used for scheduling tasks and print jobs.",
-      "key_fact": "Stacks use LIFO (last in, first out); queues use FIFO (first in, first out).",
-      "layout": "comparison",
+      "title": "Equilibrium",
+      "learning_objective": "Reproduce the definition of equilibrium and how it is determined.",
+      "narration": "The equilibrium price is where the two curves cross: the amount buyers want equals the amount sellers offer. If the price is above it there is a surplus and prices tend to fall; below it there is a shortage and prices tend to rise. Example: if demand is Qd = 100 - 2P and supply is Qs = 20 + 2P, they are equal when 100 - 2P = 20 + 2P, so P = 20 and Q = 60.",
+      "key_fact": "The equilibrium price is where the two curves cross: the amount buyers want equals the amount sellers offer.",
+      "layout": "sequence",
       "elements": [
         {
           "id": "A",
           "type": "rectangle",
-          "text": "Stack",
-          "icon": "plate",
-          "color": "#FFA07A",
-          "description": "A structure where items are added and removed from the top.",
+          "text": "Equilibrium price",
+          "icon": null,
+          "color": "#FF6347",
+          "description": "The equilibrium price is where the two curves cross: the amount buyers want equals the amount sellers offer.",
           "expression": null
         },
         {
           "id": "B",
-          "type": "rectangle",
-          "text": "Queue",
-          "icon": "line",
-          "color": "#ADD8E6",
-          "description": "A structure where items are added to the back and removed from the front.",
+          "type": "rounded_rectangle",
+          "text": "Surplus and shortage",
+          "icon": null,
+          "color": "#FFA07A",
+          "description": "If the price is above it there is a surplus and prices tend to fall; below it there is a shortage and prices tend to rise.",
           "expression": null
         },
         {
           "id": "C",
-          "type": "ellipse",
-          "text": "LIFO",
-          "icon": "arrow",
+          "type": "rectangle",
+          "text": "Example: Qd = 100 - 2P, Qs = 20 + 2P",
+          "icon": null,
           "color": "#FFD700",
-          "description": "Last in, first out: the last item added is the first one removed.",
-          "expression": null
-        },
-        {
-          "id": "D",
-          "type": "ellipse",
-          "text": "FIFO",
-          "icon": "arrow",
-          "color": "#87CEEB",
-          "description": "First in, first out: the first item added is the first one removed.",
+          "description": "Example: if demand is Qd = 100 - 2P and supply is Qs = 20 + 2P, they are equal when 100 - 2P = 20 + 2P, so P = 20 and Q = 60.",
           "expression": null
         }
       ],
       "connections": [
         {
           "from": "A",
-          "to": "C",
-          "label": "uses",
-          "relationship": "part_of"
-        },
-        {
-          "from": "B",
-          "to": "D",
-          "label": "uses",
+          "to": "B",
+          "label": "related to",
           "relationship": "part_of"
         },
         {
           "from": "A",
-          "to": "B",
-          "label": "different",
-          "relationship": "compares_with"
+          "to": "C",
+          "label": "illustrated by",
+          "relationship": "part_of"
         }
       ],
       "x_range": null,

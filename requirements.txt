@@ -7,3 +7,4 @@ cairosvg
 pydantic
 matplotlib
 sympy
+imageio-ffmpeg

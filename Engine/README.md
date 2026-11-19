@@ -439,3 +439,20 @@ autonomous production system.
 | scene_parser.py | Read and validate Ollama JSON |
 | layout_engine.py | Calculate positions of shapes |
 | excalidraw_exporter.py | Generate Excalidraw JSON |
+
+
+StudyMate\
+  .venv\
+  main.py                    <- Step 1: PDF -> diagram.json
+  uploads\                   <- your PDFs (Biology_Foundations.pdf, ...)
+  Engine\
+    scene_prompt.txt         <- the prompt main.py sends to Ollama
+    excalimate_to_mp4.py     <- Step 3: .excalidraw -> .mp4
+    excalidraw-libraries\    <- icon repo (git clone)
+    bioicons\                <- icon repo (git clone)
+    visualization\
+      scene_builder.py       <- Step 2: diagram.json -> .excalidraw
+      icons.py               <- used by scene_builder.py
+      mathviz.py             <- used by scene_builder.py
+      diagram.json           <- written by Step 1
+      scenes\                <- written by Step 2 (and Step 3's .mp4s)
