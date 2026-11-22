@@ -18,15 +18,13 @@ SYSTEM_PROMPT = (
     "2. Reuse the same ID once defined; connect nodes with -->.\n"
     "3. Put narration as comment lines starting with %% .\n"
     "4. Define each node once. Do not repeat lines.\n"
-    "5. Wrap the whole diagram in a ```mermaid code fence and output nothing else.\n"
+    "5. Output ONLY the raw Mermaid diagram: no Markdown code fences, nothing else.\n"
     "\n"
     "Example of the required style:\n"
-    "```mermaid\n"
     "graph LR\n"
     "    co2[Carbon dioxide] --> calvinCycle[Calvin cycle]\n"
     "    calvinCycle --> glucose[Glucose]\n"
-    "    %% The Calvin cycle fixes carbon dioxide into sugar.\n"
-    "```"
+    "    %% The Calvin cycle fixes carbon dioxide into sugar."
 )
 
 
@@ -56,6 +54,17 @@ class OllamaEngine:
         return out
 
 
+def strip_code_fences(text: str) -> str:
+    """Remove a surrounding ```mermaid ... ``` fence if the model added one,
+    so diagram.mmd holds raw Mermaid that a parser can render directly."""
+    lines = text.strip().splitlines()
+    if lines and lines[0].lstrip().startswith("```"):
+        lines = lines[1:]
+    if lines and lines[-1].strip().startswith("```"):
+        lines = lines[:-1]
+    return "\n".join(lines).strip() + "\n"
+
+
 if __name__ == "__main__":
     print("=== STAGE 1: Docling — reading PDF into Markdown ===")
     docling_engine = DoclingEngine()
@@ -67,5 +76,5 @@ if __name__ == "__main__":
     ollama_lesson = ollama_engine.generateLesson(markdown_file)
 
     with open("diagram.mmd", "w", encoding="utf-8") as file:
-        file.write(ollama_lesson)
+        file.write(strip_code_fences(ollama_lesson))
     print("\n\n=== Saved Mermaid output to diagram.mmd ===")
