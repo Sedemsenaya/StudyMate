@@ -79,6 +79,10 @@ def latex_to_plain(s):
             i = j
         elif s[i] == "\\":
             m = re.match(r"\\([A-Za-z]+|.)", s[i:])
+            if m is None:                 # lone "\" at a line end (e.g. ASCII tree "/ \")
+                out += "\\"
+                i += 1
+                continue
             name = m.group(0)
             if name in LATEX_SYMBOLS:
                 out += LATEX_SYMBOLS[name]
@@ -148,7 +152,10 @@ def pretty(s):
     s = s.replace("**", "^").replace("<=", "≤").replace(">=", "≥").replace("!=", "≠")
     s = s.replace("+/-", "±").replace("->", "→").replace("~=", "≈")
     s = _script(s, "^", SUP, SUP_OK)
+    # identifiers like student_id, aws_db_instance, __init__ are code, not subscripts
+    s = re.sub(r"\b\w*[A-Za-z]{2}\w*_\w+|\w+_\w*[A-Za-z]{2}\w*|\b_\w+", lambda m: m.group(0).replace("_", "\x00"), s)
     s = _script(s, "_", SUB, SUB_OK)
+    s = s.replace("\x00", "_")
     s = _times(s)
     s = re.sub(r"(\d) π", r"\1π", s)
     s = s.replace("{", "").replace("}", "")

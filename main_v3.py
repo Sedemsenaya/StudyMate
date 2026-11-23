@@ -40,7 +40,7 @@ def pdf_to_markdown(pdf, tables=True):
     from docling.datamodel.pipeline_options import PdfPipelineOptions
     from docling.document_converter import DocumentConverter, PdfFormatOption
     opts = PdfPipelineOptions()
-    opts.do_ocr = False                  # text PDFs; set True for scanned ones
+    opts.do_ocr = True                  # text PDFs; set True for scanned ones
     opts.do_table_structure = tables     # keep tables so no row is lost
     conv = DocumentConverter(format_options={InputFormat.PDF: PdfFormatOption(
         pipeline_options=opts)})

@@ -1,0 +1,1362 @@
+[
+[
+"Algorithms",
+"Bubble sort",
+"Bubble sort on 5 1 4 2 8 3"
+],
+[
+"Data structures",
+"Hash table",
+"Hash table collisions"
+],
+[
+"Data structures",
+"Binary search tree",
+"Insert 50 30 70 20 40 60 80 35 into a binary search tree"
+],
+[
+"Data structures",
+"Min-heap",
+"A priority queue as a binary heap"
+],
+[
+"Programming",
+"Recursion",
+"Recursion needs a base case: factorial"
+],
+[
+"Theory of computation",
+"A DFA",
+"A DFA is a finite automaton"
+],
+[
+"Operating systems",
+"Virtual memory",
+"Virtual memory uses a page table"
+],
+[
+"Big data",
+"MapReduce",
+"MapReduce word count"
+],
+[
+"Software engineering",
+"Git branches",
+"Create a feature branch in git then merge"
+],
+[
+"Networks",
+"Subnetting",
+"Subnet 192.168.10.77/26"
+],
+[
+"Computer basics",
+"Binary and hex",
+"Convert 156 to binary and hexadecimal"
+],
+[
+"Security",
+"Blockchain",
+"A blockchain links blocks by hash"
+],
+[
+"Security",
+"Caesar cipher",
+"The Caesar cipher with a shift of 3"
+],
+[
+"Security",
+"Firewall rules",
+"Firewall rules are checked in order"
+],
+[
+"Cloud",
+"Load balancer",
+"A load balancer spreads traffic"
+],
+[
+"Security",
+"DDoS",
+"A DDoS attack uses a botnet"
+],
+[
+"Security",
+"CIA triad",
+"The CIA triad: confidentiality, integrity and availability"
+],
+[
+"Security",
+"Defense in depth",
+"Defense in depth"
+],
+[
+"Deep learning",
+"Convolution",
+"A CNN uses convolution"
+],
+[
+"Machine learning",
+"Confusion matrix",
+"Confusion matrix: precision and recall"
+],
+[
+"Data analysis",
+"Descriptive statistics",
+"Median, quartiles and box plot"
+],
+[
+"NLP",
+"Byte-pair encoding",
+"Byte-pair encoding builds subword tokens"
+],
+[
+"Biology",
+"Photosynthesis",
+"Photosynthesis"
+],
+[
+"Biology",
+"DNA",
+"DNA replication: the double helix ATGCGTAC"
+],
+[
+"Biology",
+"From DNA to protein",
+"Transcription and translation: codons"
+],
+[
+"Biology",
+"The heart",
+"The heart: ventricle and atrium"
+],
+[
+"Earth science",
+"The water cycle",
+"The water cycle: evaporation and condensation"
+],
+[
+"Biology",
+"A neuron",
+"A neuron fires an action potential"
+],
+[
+"Chemistry",
+"States of matter",
+"The three states of matter"
+],
+[
+"Physics",
+"Waves",
+"Wavelength and amplitude"
+],
+[
+"Physics",
+"Refraction",
+"Refraction and Snell's law"
+],
+[
+"Chemistry",
+"pH scale",
+"The pH scale: acidic and alkaline"
+],
+[
+"Astronomy",
+"The solar system",
+"The solar system and the planets"
+],
+[
+"Maths",
+"Venn diagram",
+"A Venn diagram: union and intersection"
+],
+[
+"Probability",
+"Probability tree",
+"Conditional probability with a tree diagram"
+],
+[
+"Linear algebra",
+"Matrix multiplication",
+"Matrix multiplication"
+],
+[
+"Calculus",
+"Riemann sums",
+"The area under the curve"
+],
+[
+"Physics",
+"Adding vectors",
+"Vector addition: the resultant vector"
+],
+[
+"Economics",
+"Supply and demand",
+"Supply and demand: equilibrium price"
+],
+[
+"Algorithms",
+"Dynamic programming: LCS",
+"Dynamic programming: longest common subsequence"
+],
+[
+"Algorithms",
+"Merge sort",
+"Merge sort is divide and conquer"
+],
+[
+"Algorithms",
+"Huffman coding",
+"Huffman coding"
+],
+[
+"Data structures",
+"Trie",
+"A trie stores words for autocomplete"
+],
+[
+"Algorithms",
+"Topological sort",
+"Topological sort of a DAG"
+],
+[
+"Operating systems",
+"LRU page replacement",
+"LRU page replacement"
+],
+[
+"Architecture",
+"Direct-mapped cache",
+"A direct-mapped cache: tag, index and offset"
+],
+[
+"Networks",
+"TCP congestion control",
+"TCP congestion control: slow start"
+],
+[
+"Operating systems",
+"Deadlock",
+"Deadlock: circular wait"
+],
+[
+"Concurrency",
+"Race condition",
+"A race condition needs a mutex"
+],
+[
+"Web",
+"JavaScript event loop",
+"The JavaScript event loop and microtasks"
+],
+[
+"Computer basics",
+"Two's complement",
+"Two's complement of -13"
+],
+[
+"Security",
+"JSON Web Token",
+"A JWT (JSON Web Token)"
+],
+[
+"Security",
+"SQL injection",
+"SQL injection attack"
+],
+[
+"Security",
+"Password hashing",
+"Store passwords with a salt and bcrypt"
+],
+[
+"DevOps",
+"CI/CD pipeline",
+"CI/CD with GitHub Actions"
+],
+[
+"Cloud",
+"Auto scaling",
+"Auto scaling groups scale out"
+],
+[
+"Machine learning",
+"Decision tree",
+"A decision tree splits on Gini"
+],
+[
+"Machine learning",
+"k-nearest neighbors",
+"k-nearest neighbors"
+],
+[
+"Statistics",
+"Normal distribution",
+"The normal distribution (bell curve)"
+],
+[
+"Deep learning",
+"Softmax",
+"Softmax turns logits into probabilities"
+],
+[
+"Machine learning",
+"Overfitting",
+"Overfitting and early stopping"
+],
+[
+"Databases",
+"ER diagram",
+"An ER diagram with primary key and foreign key"
+],
+[
+"Data analysis",
+"pandas groupby",
+"pandas groupby"
+],
+[
+"Genetics",
+"Punnett square",
+"A Punnett square: Aa x Aa genotype"
+],
+[
+"Biology",
+"Meiosis",
+"Meiosis and crossing over"
+],
+[
+"Biology",
+"Cellular respiration",
+"Cellular respiration: glycolysis and the Krebs cycle"
+],
+[
+"Biology",
+"Osmosis",
+"Osmosis in hypertonic solution"
+],
+[
+"Earth science",
+"Plate tectonics",
+"Plate tectonics and subduction"
+],
+[
+"Astronomy",
+"Moon phases",
+"Phases of the moon: waxing and waning"
+],
+[
+"Earth science",
+"Earth's layers",
+"The inner core and outer core"
+],
+[
+"Physics",
+"Thin lens",
+"A converging lens and focal length"
+],
+[
+"Physics",
+"Pendulum",
+"A simple pendulum"
+],
+[
+"Physics",
+"Energy conservation",
+"Kinetic energy and potential energy"
+],
+[
+"Chemistry",
+"Balancing equations",
+"Balance the equation CH4 + O2 -> CO2 + H2O"
+],
+[
+"Chemistry",
+"Activation energy",
+"Activation energy and a catalyst"
+],
+[
+"Calculus",
+"The derivative",
+"The derivative is the slope of the tangent line"
+],
+[
+"Finance",
+"Compound interest",
+"Compound interest"
+],
+[
+"Algebra",
+"Systems of equations",
+"Solve the system of equations"
+],
+[
+"Business",
+"Break-even analysis",
+"Break-even point"
+],
+[
+"GIS",
+"Buffer analysis",
+"GIS buffer analysis: houses within 100 m of the river"
+],
+[
+"Algorithms",
+"Quick sort",
+"Quick sort partitions around a pivot"
+],
+[
+"Algorithms",
+"Maze shortest path",
+"Solve the maze"
+],
+[
+"Data structures",
+"Bloom filter",
+"A bloom filter"
+],
+[
+"Distributed systems",
+"Consistent hashing",
+"Consistent hashing on a hash ring"
+],
+[
+"Data structures",
+"Reverse a linked list",
+"Reverse a linked list"
+],
+[
+"Algorithms",
+"Sliding window",
+"The sliding window technique"
+],
+[
+"Operating systems",
+"Memory layout",
+"Memory layout: text segment, heap and stack"
+],
+[
+"Operating systems",
+"fork()",
+"The fork() system call"
+],
+[
+"Operating systems",
+"Disk scheduling",
+"Disk scheduling: SSTF"
+],
+[
+"Storage",
+"RAID 5",
+"RAID 5 with parity"
+],
+[
+"Architecture",
+"Instruction cycle",
+"The fetch-decode-execute cycle"
+],
+[
+"Computer basics",
+"Floating point",
+"IEEE 754 floating-point"
+],
+[
+"Computer basics",
+"UTF-8",
+"UTF-8 and Unicode"
+],
+[
+"Networks",
+"NAT",
+"NAT: network address translation"
+],
+[
+"Networks",
+"Longest prefix match",
+"Routing table and longest prefix match"
+],
+[
+"Networks",
+"Traceroute",
+"Traceroute uses TTL"
+],
+[
+"Networks",
+"DHCP",
+"DHCP gives out addresses"
+],
+[
+"Networks",
+"ARP",
+"ARP maps IP to MAC"
+],
+[
+"Security",
+"TLS handshake",
+"The TLS handshake for HTTPS"
+],
+[
+"Security",
+"OAuth",
+"OAuth sign in with Google"
+],
+[
+"Networks",
+"Email delivery",
+"SMTP email delivery"
+],
+[
+"Security",
+"Digital signature",
+"A digital signature"
+],
+[
+"Security",
+"Buffer overflow",
+"A buffer overflow overwrites the return address"
+],
+[
+"Security",
+"Brute force",
+"Brute-force attacks and password length"
+],
+[
+"Deep learning",
+"Backpropagation",
+"Backpropagation uses the chain rule"
+],
+[
+"Machine learning",
+"ROC curve",
+"ROC curve and AUC"
+],
+[
+"Reinforcement learning",
+"Value iteration",
+"Reinforcement learning: value iteration"
+],
+[
+"Machine learning",
+"PCA",
+"Principal component analysis (PCA)"
+],
+[
+"NLP",
+"Word embeddings",
+"Word embeddings (word2vec)"
+],
+[
+"Deep learning",
+"Transformer",
+"The transformer architecture"
+],
+[
+"SQL",
+"Joins",
+"Inner join and left join"
+],
+[
+"Databases",
+"Normalization",
+"Database normalization: 3NF"
+],
+[
+"Data engineering",
+"Star schema",
+"A star schema with a fact table"
+],
+[
+"Data analysis",
+"Moving average",
+"A moving average smooths a time series"
+],
+[
+"Statistics",
+"Correlation",
+"Correlation and Pearson r"
+],
+[
+"Number theory",
+"Sieve",
+"Prime numbers: Sieve of Eratosthenes"
+],
+[
+"Number theory",
+"GCD",
+"The greatest common divisor (Euclid)"
+],
+[
+"Combinatorics",
+"Pascal's triangle",
+"Pascal's triangle"
+],
+[
+"Probability",
+"Binomial distribution",
+"The binomial distribution"
+],
+[
+"Probability",
+"Bayes and base rates",
+"A medical test and the base rate"
+],
+[
+"Probability",
+"Monte Carlo",
+"Monte Carlo estimate"
+],
+[
+"Physics",
+"Collisions",
+"Momentum in an elastic collision"
+],
+[
+"Physics",
+"Inclined plane",
+"A block on an inclined plane"
+],
+[
+"Chemistry",
+"Ideal gas law",
+"Ideal gas law PV = nRT"
+],
+[
+"Physics",
+"Half-life",
+"Half-life and radioactive decay"
+],
+[
+"Physics",
+"Doppler effect",
+"The Doppler effect"
+],
+[
+"Chemistry",
+"Electron configuration",
+"Electron configuration and Hund's rule"
+],
+[
+"Ecology",
+"Food web",
+"A food web"
+],
+[
+"Ecology",
+"Energy pyramid",
+"Energy pyramid: the 10% rule"
+],
+[
+"Evolution",
+"Natural selection",
+"Natural selection"
+],
+[
+"Earth science",
+"Seasons",
+"Why we have seasons: axial tilt"
+],
+[
+"Climate",
+"Greenhouse effect",
+"The greenhouse effect"
+],
+[
+"Geology",
+"Rock cycle",
+"The rock cycle: igneous, sedimentary, metamorphic"
+],
+[
+"GIS",
+"Map projections",
+"Map projections: Mercator"
+],
+[
+"GIS",
+"Voronoi polygons",
+"Thiessen (Voronoi) polygons"
+],
+[
+"GIS",
+"Choropleth map",
+"A choropleth map"
+],
+[
+"Finance",
+"Loan amortization",
+"Mortgage amortization"
+],
+[
+"Economics",
+"Production possibilities",
+"Production possibilities and opportunity cost"
+],
+[
+"Algorithms",
+"Minimum spanning tree",
+"Kruskal's minimum spanning tree"
+],
+[
+"Algorithms",
+"KMP string matching",
+"KMP string matching"
+],
+[
+"Algorithms",
+"N-queens",
+"Backtracking: the 4 queens problem"
+],
+[
+"Data structures",
+"AVL tree",
+"An AVL tree with rotations"
+],
+[
+"Algorithms",
+"Big-O",
+"Big-O time complexity"
+],
+[
+"Databases",
+"B-tree index",
+"A B-tree database index"
+],
+[
+"Architecture",
+"Instruction pipeline",
+"A 5-stage instruction pipeline with a data hazard"
+],
+[
+"Operating systems",
+"Producer-consumer",
+"The producer-consumer problem with semaphores"
+],
+[
+"Networks",
+"Go-Back-N",
+"Go-Back-N ARQ"
+],
+[
+"Networks",
+"IPv4 header",
+"The IPv4 header and header checksum"
+],
+[
+"Networks",
+"VPN",
+"A VPN tunnel with IPsec"
+],
+[
+"Cloud",
+"CDN",
+"A CDN (content delivery network)"
+],
+[
+"Databases",
+"Transactions",
+"ACID properties of a database transaction"
+],
+[
+"Docker",
+"Image layers",
+"A Dockerfile builds image layers"
+],
+[
+"Kubernetes",
+"Rolling update",
+"A rolling update in Kubernetes"
+],
+[
+"Terraform",
+"Plan",
+"terraform plan"
+],
+[
+"Kafka",
+"Partitions",
+"Kafka partitions and consumer groups"
+],
+[
+"React",
+"Virtual DOM",
+"React virtual DOM reconciliation"
+],
+[
+"APIs",
+"Rate limiting",
+"Rate limiting with a token bucket"
+],
+[
+"Security",
+"Diffie-Hellman",
+"Diffie-Hellman key exchange"
+],
+[
+"Security",
+"RSA",
+"RSA public-key encryption"
+],
+[
+"Machine learning",
+"Linear regression",
+"Linear regression: least squares"
+],
+[
+"Machine learning",
+"Logistic regression",
+"Logistic regression for binary classification"
+],
+[
+"Deep learning",
+"RNN",
+"A recurrent neural network (RNN)"
+],
+[
+"Machine learning",
+"Cross-validation",
+"k-fold cross-validation"
+],
+[
+"NLP",
+"TF-IDF",
+"TF-IDF"
+],
+[
+"Machine learning",
+"Perceptron",
+"The perceptron"
+],
+[
+"Statistics",
+"Box plot",
+"A box plot with quartiles"
+],
+[
+"Statistics",
+"Histogram",
+"A histogram"
+],
+[
+"Statistics",
+"Central limit theorem",
+"The central limit theorem"
+],
+[
+"Statistics",
+"Hypothesis test",
+"A hypothesis test and p-value"
+],
+[
+"Calculus",
+"Taylor series",
+"Taylor series"
+],
+[
+"Signals",
+"Fourier series",
+"Fourier series"
+],
+[
+"Numerical methods",
+"Newton's method",
+"Newton's method"
+],
+[
+"Linear algebra",
+"Eigenvectors",
+"Eigenvalues and eigenvectors"
+],
+[
+"Computer basics",
+"Number bases",
+"Convert decimal to binary"
+],
+[
+"Number theory",
+"Modular arithmetic",
+"Modular arithmetic"
+],
+[
+"Physics",
+"Simple harmonic motion",
+"Hooke's law and simple harmonic motion"
+],
+[
+"Physics",
+"Levers and torque",
+"Torque on a lever"
+],
+[
+"Physics",
+"Buoyancy",
+"Buoyancy and Archimedes"
+],
+[
+"Physics",
+"Electric field",
+"The electric field of point charges"
+],
+[
+"Physics",
+"EM spectrum",
+"The electromagnetic spectrum"
+],
+[
+"Chemistry",
+"Titration",
+"An acid-base titration"
+],
+[
+"Chemistry",
+"Limiting reagent",
+"The limiting reagent"
+],
+[
+"Chemistry",
+"VSEPR",
+"VSEPR molecular geometry"
+],
+[
+"Biology",
+"Enzymes",
+"Enzymes and the active site"
+],
+[
+"Biology",
+"Action potential",
+"The action potential"
+],
+[
+"Genetics",
+"Hardy-Weinberg",
+"Hardy-Weinberg equilibrium"
+],
+[
+"Ecology",
+"Population growth",
+"Population growth and carrying capacity"
+],
+[
+"GIS",
+"IDW interpolation",
+"Inverse distance interpolation"
+],
+[
+"GIS",
+"Topographic map",
+"A topographic map with contour lines"
+],
+[
+"GIS",
+"Raster vs vector",
+"Raster vs vector data"
+],
+[
+"GIS",
+"Spatial join",
+"A spatial join (point in polygon)"
+],
+[
+"Finance",
+"Net present value",
+"Net present value (NPV)"
+],
+[
+"Economics",
+"Elasticity",
+"Price elasticity of demand"
+],
+[
+"Distributed systems",
+"Two-phase commit",
+"Two-phase commit"
+],
+[
+"Caching",
+"Redis cache-aside",
+"The cache-aside pattern with Redis"
+],
+[
+"Security",
+"XSS",
+"Cross-site scripting (XSS)"
+],
+[
+"Security",
+"CSRF",
+"Cross-site request forgery (CSRF)"
+],
+[
+"Messaging",
+"Pub/sub",
+"Publish-subscribe with a message broker"
+],
+[
+"Web",
+"WebSockets",
+"WebSockets"
+],
+[
+"Security",
+"Kerberos",
+"Kerberos authentication"
+],
+[
+"Algorithms",
+"A* search",
+"A* search with a Manhattan heuristic"
+],
+[
+"Algorithms",
+"Floyd-Warshall",
+"Floyd-Warshall all-pairs shortest paths"
+],
+[
+"Algorithms",
+"Radix sort",
+"Radix sort"
+],
+[
+"Algorithms",
+"Activity selection",
+"Activity selection: a greedy algorithm"
+],
+[
+"Algorithms",
+"Coin change",
+"The coin change problem"
+],
+[
+"Compilers",
+"Lexical analysis",
+"Lexical analysis: the lexer"
+],
+[
+"Runtimes",
+"Garbage collection",
+"Garbage collection: mark and sweep"
+],
+[
+"Architecture",
+"Branch prediction",
+"Branch prediction with a 2-bit counter"
+],
+[
+"Architecture",
+"Amdahl's law",
+"Amdahl's law"
+],
+[
+"Digital logic",
+"Ripple-carry adder",
+"A ripple-carry adder made of full adders"
+],
+[
+"Digital logic",
+"Karnaugh map",
+"Simplify with a Karnaugh map"
+],
+[
+"Architecture",
+"Endianness",
+"Big-endian vs little-endian"
+],
+[
+"Architecture",
+"MIPS encoding",
+"MIPS instruction format: R-type and I-type"
+],
+[
+"Architecture",
+"Memory hierarchy",
+"The memory hierarchy"
+],
+[
+"Operating systems",
+"Banker's algorithm",
+"The banker's algorithm"
+],
+[
+"Operating systems",
+"Memory allocation",
+"First-fit, best-fit and worst-fit"
+],
+[
+"Networks",
+"Distance vector",
+"Distance-vector routing (Bellman-Ford)"
+],
+[
+"Networks",
+"Hamming code",
+"Hamming code error correction"
+],
+[
+"Networks",
+"CRC",
+"CRC: cyclic redundancy check"
+],
+[
+"Networks",
+"Manchester encoding",
+"Manchester encoding vs NRZ"
+],
+[
+"Cisco",
+"Access lists",
+"Cisco access control lists (ACLs)"
+],
+[
+"Cisco",
+"VLANs",
+"VLANs and 802.1Q trunk ports"
+],
+[
+"AWS",
+"VPC",
+"An AWS VPC with public and private subnets"
+],
+[
+"AWS",
+"IAM policies",
+"IAM policy evaluation and least privilege"
+],
+[
+"Microservices",
+"Circuit breaker",
+"The circuit breaker pattern"
+],
+[
+"Distributed systems",
+"Raft",
+"Raft leader election"
+],
+[
+"Databases",
+"Sharding",
+"Database sharding"
+],
+[
+"Security",
+"Merkle tree",
+"A Merkle tree"
+],
+[
+"Security",
+"Port scanning",
+"Port scanning with nmap"
+],
+[
+"Security",
+"Certificate chain",
+"The certificate chain of trust"
+],
+[
+"Deep learning",
+"Activation functions",
+"Activation functions: ReLU, sigmoid, tanh"
+],
+[
+"Machine learning",
+"Naive Bayes",
+"Naive Bayes spam filter"
+],
+[
+"Machine learning",
+"DBSCAN",
+"DBSCAN density-based clustering"
+],
+[
+"Machine learning",
+"Hierarchical clustering",
+"Hierarchical clustering and the dendrogram"
+],
+[
+"NLP",
+"Cosine similarity",
+"Cosine similarity of embeddings"
+],
+[
+"LLMs",
+"Temperature",
+"Sampling temperature in an LLM"
+],
+[
+"Transformers",
+"Positional encoding",
+"Positional encoding"
+],
+[
+"Deep learning",
+"Learning rate",
+"Choosing the learning rate"
+],
+[
+"LLMs",
+"RAG",
+"Retrieval-augmented generation (RAG)"
+],
+[
+"SQL",
+"Window functions",
+"SQL window functions"
+],
+[
+"Statistics",
+"Z-scores",
+"Z-scores and standardization"
+],
+[
+"Linear algebra",
+"Dot product",
+"The dot product"
+],
+[
+"Algebra",
+"Complex numbers",
+"Complex numbers on the complex plane"
+],
+[
+"Algebra",
+"Quadratic equations",
+"Quadratic equations and the discriminant"
+],
+[
+"Algebra",
+"Sequences",
+"Arithmetic and geometric sequences"
+],
+[
+"Probability",
+"Markov chain",
+"A Markov chain"
+],
+[
+"Logic",
+"Truth tables",
+"Truth tables"
+],
+[
+"Combinatorics",
+"Permutations",
+"Permutations and combinations"
+],
+[
+"Graph theory",
+"Euler paths",
+"Euler paths and the Konigsberg bridges"
+],
+[
+"Physics",
+"RC circuit",
+"An RC circuit: the capacitor charging"
+],
+[
+"Physics",
+"Standing waves",
+"Standing waves on a vibrating string"
+],
+[
+"Physics",
+"Double slit",
+"Young's double-slit experiment"
+],
+[
+"Physics",
+"Circular motion",
+"Circular motion and centripetal force"
+],
+[
+"Astronomy",
+"Kepler's laws",
+"Kepler's laws: elliptical orbit"
+],
+[
+"Chemistry",
+"Heating curve",
+"The heating curve of water and latent heat"
+],
+[
+"Physics",
+"Photoelectric effect",
+"The photoelectric effect"
+],
+[
+"Chemistry",
+"Collision theory",
+"Maxwell-Boltzmann distribution and collision theory"
+],
+[
+"Chemistry",
+"Galvanic cell",
+"A galvanic cell"
+],
+[
+"Biology",
+"PCR",
+"PCR: polymerase chain reaction"
+],
+[
+"Biology",
+"Gel electrophoresis",
+"Gel electrophoresis"
+],
+[
+"Evolution",
+"Phylogenetic tree",
+"A phylogenetic tree"
+],
+[
+"Physiology",
+"Homeostasis",
+"Homeostasis: blood glucose and insulin"
+],
+[
+"Remote sensing",
+"NDVI",
+"NDVI from satellite bands"
+],
+[
+"Earth science",
+"Locating an earthquake",
+"Finding the epicenter from seismic waves"
+],
+[
+"GIS",
+"Slope and hillshade",
+"Hillshade and slope analysis"
+],
+[
+"Economics",
+"Gini coefficient",
+"The Lorenz curve and Gini coefficient"
+],
+[
+"Game theory",
+"Prisoner's dilemma",
+"The prisoner's dilemma"
+],
+[
+"Economics",
+"Comparative advantage",
+"Comparative advantage"
+],
+[
+"AWS",
+"Serverless",
+"Serverless with AWS Lambda and API Gateway"
+],
+[
+"Security",
+"MFA",
+"Multi-factor authentication"
+],
+[
+"Architecture",
+"Interrupts",
+"Interrupt handling"
+],
+[
+"Security",
+"SSH",
+"SSH key authentication"
+]
+]

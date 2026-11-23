@@ -7,3 +7,7 @@ Engine/Output/
 .icon_cache/
 __pycache__/
 *.mp4
+uploads/
+Engine/v5/
+main_v5.py
+run_v5_*.bat

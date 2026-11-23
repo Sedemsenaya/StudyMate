@@ -8,3 +8,9 @@ pydantic
 matplotlib
 sympy
 imageio-ffmpeg
+manim
+sqlglot
+pypdfium2
+piper-tts
+imageio-ffmpeg
+rapidocr_onnxruntime
