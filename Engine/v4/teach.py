@@ -1180,6 +1180,8 @@ def teach_lessons(lessons, ai, log=print, every=4, max_chars=1800, parallel=1):
             out = dict(out or {}, visual=rv, _rules=True)
         else:
             out = _teach_call(ai, job[2]) if ai else None
+            if not isinstance(out, dict):          # no AI answer (budget used up, timeout, bad JSON): no extra scene
+                return job, None, time.perf_counter() - a
             out.setdefault("explain", _first_sentences(job[2].split("\n\n", 1)[-1]))
             out.setdefault("title", job[3][0].get("title", ""))
         return job, out, time.perf_counter() - a
